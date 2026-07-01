@@ -1,0 +1,176 @@
+/* ==========================================
+   NAVBAR.CSS - Navigation Styles
+   ==========================================
+
+   WHY: The navbar needs dedicated styles for:
+   - Layout and positioning
+   - Responsive mobile menu
+   - Link hover effects
+   - Active state indication
+*/
+
+/* ==========================================
+   NAVBAR CONTAINER
+   ========================================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ==========================================
+   LOGO / BRAND
+   ========================================== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    object-fit: contain;
+}
+
+.navbar-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.navbar-title span {
+    color: var(--primary);
+}
+
+/* ==========================================
+   NAVIGATION LINKS
+   ========================================== */
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    list-style: none;
+}
+
+.navbar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.navbar-link:hover {
+    color: var(--primary);
+    background: var(--bg-tertiary);
+}
+
+.navbar-link.active {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.navbar-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* ==========================================
+   MOBILE MENU TOGGLE
+   ========================================== */
+.navbar-toggle {
+    display: none;
+    padding: var(--space-sm);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast);
+}
+
+.navbar-toggle:hover {
+    background: var(--bg-tertiary);
+}
+
+.navbar-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==========================================
+   MOBILE MENU (OPEN STATE)
+   ========================================== */
+.navbar-menu-open .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-md);
+    gap: var(--space-xs);
+}
+
+.navbar-menu-open .navbar-link {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ==========================================
+   RESPONSIVE STYLES
+   ========================================== */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-md);
+    }
+
+    .navbar-links.navbar-open {
+        display: flex;
+    }
+
+    .navbar-link {
+        width: 100%;
+        justify-content: center;
+        padding: var(--space-md);
+    }
+}

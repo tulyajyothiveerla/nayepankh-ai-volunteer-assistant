@@ -1,0 +1,238 @@
+/* ==========================================
+   DASHBOARD.CSS - Admin Dashboard Styles
+   ==========================================
+
+   WHY: The admin dashboard needs specific styles for:
+   - Statistic cards
+   - Data tables
+   - Responsive grid layouts
+*/
+
+/* ==========================================
+   DASHBOARD LAYOUT
+   ========================================== */
+.dashboard {
+    min-height: calc(100vh - 64px);
+    padding: var(--space-xl) 0;
+}
+
+.dashboard-header {
+    margin-bottom: var(--space-xl);
+}
+
+.dashboard-title {
+    font-size: var(--font-size-3xl);
+    color: var(--secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.dashboard-subtitle {
+    color: var(--text-secondary);
+}
+
+/* ==========================================
+   STATS GRID
+   ========================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+/* ==========================================
+   STAT CARD
+   ========================================== */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.stat-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.stat-icon.primary {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+}
+
+.stat-icon.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.stat-icon.warning {
+    background: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.stat-icon.accent {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--secondary);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin-top: var(--space-xs);
+}
+
+/* ==========================================
+   DATA TABLE CONTAINER
+   ========================================== */
+.table-container {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.table-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+/* ==========================================
+   DATA TABLE
+   ========================================== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: var(--space-md);
+    text-align: left;
+}
+
+.data-table th {
+    background: var(--bg-tertiary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.data-table td {
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.data-table tbody tr:hover {
+    background: var(--bg-tertiary);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================================
+   TABLE EMPTY STATE
+   ========================================== */
+.table-empty {
+    padding: var(--space-3xl);
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.table-empty svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-md);
+    opacity: 0.5;
+}
+
+.table-empty p {
+    font-size: var(--font-size-sm);
+}
+
+/* ==========================================
+   TABLE BADGES
+   ========================================== */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+}
+
+.badge.primary {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+}
+
+.badge.success {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.badge.warning {
+    background: var(--warning-light);
+    color: var(--warning);
+}
+
+/* ==========================================
+   RESPONSIVE TABLE
+   ========================================== */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .data-table {
+        min-width: 600px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}

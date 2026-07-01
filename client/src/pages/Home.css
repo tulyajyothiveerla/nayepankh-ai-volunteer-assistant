@@ -1,0 +1,319 @@
+/* ==========================================
+   HOME.CSS - Home Page Styles
+   ========================================== */
+
+.home {
+    min-height: 100vh;
+}
+
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
+.hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+    padding: var(--space-3xl) 0 calc(var(--space-3xl) + 60px);
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.hero-text {
+    color: var(--text-inverse);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+}
+
+.hero-title span {
+    color: var(--accent-light);
+}
+
+.hero-description {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--space-xl);
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   HERO ILLUSTRATION
+   ========================================== */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-illustration {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.illustration-circle {
+    position: absolute;
+    border-radius: var(--radius-full);
+}
+
+.illustration-circle.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.illustration-circle.accent {
+    width: 80px;
+    height: 80px;
+    background: var(--accent);
+    opacity: 0.3;
+    top: -20px;
+    right: -20px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.illustration-circle.secondary {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    left: 0;
+    animation: float 5s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ==========================================
+   HERO WAVE
+   ========================================== */
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.hero-wave svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================
+   SECTIONS
+   ========================================== */
+
+.section {
+    padding: var(--space-3xl) 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: var(--font-size-3xl);
+    color: var(--secondary);
+    margin-bottom: var(--space-xl);
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+/* ==========================================
+   ABOUT SECTION
+   ========================================== */
+
+.about {
+    background: var(--bg-primary);
+}
+
+/* ==========================================
+   FEATURES SECTION
+   ========================================== */
+
+.features {
+    background: var(--bg-tertiary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-lg);
+}
+
+/* ==========================================
+   CTA SECTION
+   ========================================== */
+
+.cta-section {
+    background: var(--secondary);
+    padding: var(--space-3xl) 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-title {
+    color: var(--text-inverse);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-md);
+}
+
+.cta-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background: var(--secondary-light);
+    padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand .footer-logo {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-inverse);
+}
+
+.footer-brand p {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-xs);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    padding-top: var(--space-lg);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+/* ==========================================
+   RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 992px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: var(--space-2xl) 0 calc(var(--space-2xl) + 40px);
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

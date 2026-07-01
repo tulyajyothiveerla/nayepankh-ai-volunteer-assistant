@@ -1,0 +1,152 @@
+/* ==========================================
+   BUTTON.CSS - Button Component Styles
+   ========================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* ==========================================
+   BUTTON VARIANTS
+   ========================================== */
+
+/* Primary - Main CTA button */
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-inverse);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+}
+
+/* Secondary - Alternative action */
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--text-inverse);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--secondary-light);
+}
+
+/* Outline - Subtle action */
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: var(--primary);
+    color: var(--text-inverse);
+}
+
+/* Ghost - Very subtle action */
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Danger - Destructive action */
+.btn-danger {
+    background: var(--error);
+    color: var(--text-inverse);
+}
+
+.btn-danger:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+/* ==========================================
+   BUTTON SIZES
+   ========================================== */
+
+.btn-small {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-sm);
+}
+
+.btn-medium {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-base);
+}
+
+.btn-large {
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--font-size-lg);
+}
+
+/* ==========================================
+   BUTTON STATES
+   ========================================== */
+
+.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-loading {
+    position: relative;
+}
+
+.btn-loading .btn-content {
+    visibility: hidden;
+}
+
+/* ==========================================
+   LOADING SPINNER
+   ========================================== */
+
+.btn-spinner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-icon {
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+/* ==========================================
+   ICON BUTTON (circle)
+   ========================================== */
+
+.btn-icon {
+    padding: var(--space-sm);
+    border-radius: var(--radius-full);
+}
+
+.btn-icon.btn-small {
+    padding: var(--space-xs);
+}
+
+.btn-icon.btn-large {
+    padding: var(--space-md);
+}

@@ -1,0 +1,99 @@
+/* ==========================================
+   VOLUNTEERFORM.CSS - Volunteer Page Styles
+   ========================================== */
+
+.volunteer-page {
+    min-height: calc(100vh - 64px);
+    padding: var(--space-2xl) 0;
+    background: var(--bg-tertiary);
+}
+
+.volunteer-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   FORM FOOTER
+   ========================================== */
+
+.form-footer {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.form-footer p {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.form-footer a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   SUCCESS MESSAGE
+   ========================================== */
+
+.form-message {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-lg);
+}
+
+.form-message.success {
+    background: var(--success-light);
+    border: 1px solid var(--success);
+}
+
+.form-message.success svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--success);
+}
+
+.form-message.error {
+    background: var(--error-light);
+    border: 1px solid var(--error);
+}
+
+.form-message.error svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--error);
+}
+
+.form-message strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.form-message p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 768px) {
+    .volunteer-page {
+        padding: var(--space-lg) 0;
+    }
+
+    .form-container {
+        padding: var(--space-lg);
+    }
+}

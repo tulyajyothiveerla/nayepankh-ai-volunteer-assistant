@@ -1,0 +1,91 @@
+/* ==========================================
+   CARD.CSS - Card Component Styles
+   ========================================== */
+
+.card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-xl);
+    transition: all var(--transition-normal);
+}
+
+.card-clickable {
+    cursor: pointer;
+}
+
+.card-clickable:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ==========================================
+   CARD ICON
+   ========================================== */
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-md);
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+}
+
+.card-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==========================================
+   CARD CONTENT
+   ========================================== */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.card-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.card-description {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+}
+
+/* ==========================================
+   CARD VARIANTS
+   ========================================== */
+
+.card.highlighted {
+    border-left: 4px solid var(--primary);
+}
+
+.card.featured {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: var(--text-inverse);
+}
+
+.card.featured .card-title {
+    color: var(--text-inverse);
+}
+
+.card.featured .card-description {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card.featured .card-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-inverse);
+}

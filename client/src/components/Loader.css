@@ -1,0 +1,56 @@
+/* ==========================================
+   LOADER.CSS - Loader Component Styles
+   ========================================== */
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.loader-fullpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(248, 250, 252, 0.9);
+    z-index: var(--z-modal);
+}
+
+/* ==========================================
+   SPINNER SIZES
+   ========================================== */
+
+.loader-spinner svg {
+    color: var(--primary);
+    animation: spin 1s linear infinite;
+}
+
+.loader-small .loader-spinner svg {
+    width: 16px;
+    height: 16px;
+}
+
+.loader-medium .loader-spinner svg {
+    width: 32px;
+    height: 32px;
+}
+
+.loader-large .loader-spinner svg {
+    width: 48px;
+    height: 48px;
+}
+
+/* ==========================================
+   LOADER TEXT
+   ========================================== */
+
+.loader-text {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
