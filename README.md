@@ -1,4 +1,3 @@
-#nayepankh-ai-assistant-phi.vercel.app - DEPLOYMENT LINK 
 # NayePankh AI Volunteer Assistant
 
 A full-stack web application built to streamline volunteer onboarding and provide an intelligent, automated assistant for the NayePankh Foundation.
