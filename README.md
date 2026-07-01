@@ -1,88 +1,207 @@
-# NayePankh AI Volunteer Assistant
+# 🌟 NayePankh AI Volunteer Assistant
 
-A full-stack web application built to streamline volunteer onboarding and provide an intelligent, automated assistant for the NayePankh Foundation.
+<p align="center">
 
-## 🚀 Features
+# 🚀 LIVE DEMO
 
-- **Intelligent AI Assistant:** Integrated with the Gemini API to act as an official NGO representative, answering questions about programs, volunteering, and the foundation with concise, professional responses.
-- **Volunteer Registration:** A seamless form for users to register their details, skills, and availability.
-- **Admin Dashboard:** Interface to view and manage registered volunteers.
-- **Full-Stack Architecture:** Clean separation of concerns between a React frontend, Node.js backend, and a PostgreSQL database.
-- **Production Ready:** Configured with strict CORS policies, robust error handling, and secure environment variable management.
+## 🔗 https://nayepankh-ai-assistant-phi.vercel.app
 
-## 🛠️ Tech Stack
+</p>
 
-**Frontend:**
-- React (Vite)
-- React Router DOM
+---
+
+## 📌 Project Overview
+
+NayePankh AI Volunteer Assistant is a full-stack web application designed to simplify volunteer management for the NayePankh Foundation. The platform enables volunteers to register, administrators to manage volunteer information, and users to interact with an AI-powered assistant for guidance and support.
+
+The application is built using modern web technologies with a responsive interface, a Node.js backend, PostgreSQL (Neon) cloud database, and Google's Gemini AI.
+
+---
+
+# ✨ Features
+
+### 👥 Volunteer Registration
+- Register as a volunteer
+- Store volunteer information securely
+- Cloud database using Neon PostgreSQL
+
+### 📊 Admin Dashboard
+- View all registered volunteers
+- Fetch live data from the database
+- Responsive dashboard interface
+
+### 🤖 AI Assistant
+- Powered by Google Gemini AI
+- Interactive chatbot
+- Provides volunteer guidance and assistance
+
+### ☁️ Cloud Deployment
+- Frontend & Backend deployed on Vercel
+- PostgreSQL hosted on Neon
+- Production-ready cloud architecture
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+- React.js
+- Vite
 - Axios
-- Vanilla CSS
+- CSS
 
-**Backend:**
+## Backend
 - Node.js
 - Express.js
-- PostgreSQL (pg)
-- Google Gemini API (`@google/generative-ai`)
-- CORS & dotenv
 
-## ⚙️ Prerequisites
+## Database
+- PostgreSQL
+- Neon Cloud Database
 
-Before you begin, ensure you have the following installed on your local machine:
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [PostgreSQL](https://www.postgresql.org/) (running locally or a cloud database URL)
-- A [Google Gemini API Key](https://aistudio.google.com/)
+## AI
+- Google Gemini API
 
-## 🔧 Installation & Setup
+## Deployment
+- Vercel
+- GitHub
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/nayepankh-ai-assistant.git
-   cd nayepankh-ai-assistant
-   ```
+---
 
-2. **Database Setup:**
-   - Open PostgreSQL and create a database named `nayepankh_ai`.
-   - Create the necessary tables (e.g., `volunteers` with columns for `name`, `email`, `phone`, `skills`, `interests`, and `availability`).
+# 📂 Project Structure
 
-3. **Backend Setup:**
-   ```bash
-   cd backend
-   npm install
-   ```
-   Create a `.env` file in the `backend` directory and add the following:
-   ```env
-   PORT=5000
-   DB_USER=postgres
-   DB_PASSWORD=your_db_password
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_NAME=nayepankh_ai
-   GEMINI_API_KEY=your_gemini_api_key_here
-   FRONTEND_URL=http://localhost:5173
-   ```
-   Start the backend development server:
-   ```bash
-   npm run dev
-   ```
+```
+nayepankh-ai-assistant
+│
+├── client
+│   ├── src
+│   ├── public
+│   └── package.json
+│
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── routes
+│   ├── services
+│   ├── models
+│   └── server.js
+│
+├── api
+│
+├── vercel.json
+│
+└── README.md
+```
 
-4. **Frontend Setup:**
-   Open a new terminal window and navigate to the frontend directory:
-   ```bash
-   cd client
-   npm install
-   ```
-   Start the frontend development server:
-   ```bash
-   npm run dev
-   ```
+---
 
-5. **View the Application:**
-   Open your browser and navigate to `http://localhost:5173`
+# 🚀 Live Application
 
-## 🤝 Contributing
+## 🌐 Website
 
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+### https://nayepankh-ai-assistant-phi.vercel.app
 
-## 📝 License
+---
 
-This project is open-source and available under the [MIT License](LICENSE).
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/tulyajyothiveerla/nayepankh-ai-volunteer-assistant.git
+```
+
+Move into the project
+
+```bash
+cd nayepankh-ai-volunteer-assistant
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Install frontend
+
+```bash
+cd client
+npm install
+```
+
+Install backend
+
+```bash
+cd ../backend
+npm install
+```
+
+---
+
+# ▶️ Run Locally
+
+Backend
+
+```bash
+cd backend
+npm run dev
+```
+
+Frontend
+
+```bash
+cd client
+npm run dev
+```
+
+---
+
+# 🔐 Environment Variables
+
+Backend
+
+```env
+DATABASE_URL=your_neon_database_url
+
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+---
+
+# 📷 Screenshots
+
+Add screenshots of:
+
+- Home Page
+- Volunteer Registration
+- Dashboard
+- AI Assistant
+
+---
+
+# 🎯 Future Enhancements
+
+- User Authentication
+- Admin Login
+- Email Notifications
+- Volunteer Analytics
+- Event Management
+- AI Conversation History
+
+---
+
+# 👩‍💻 Developer
+
+**Tulya Jyothi Veerla**
+
+GitHub:
+https://github.com/tulyajyothiveerla
+
+LinkedIn:
+https://www.linkedin.com/in/tulya-jyothi-veerla/
+
+---
+
+# ⭐ If you like this project
+
+Give it a ⭐ on GitHub!
