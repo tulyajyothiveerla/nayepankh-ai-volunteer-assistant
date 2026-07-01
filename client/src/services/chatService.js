@@ -17,7 +17,7 @@ import axios from 'axios';
 
 // Create axios instance for chat API
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
     headers: {
         'Content-Type': 'application/json',
     },
@@ -42,14 +42,19 @@ const api = axios.create({
 export const sendMessage = async (message) => {
     try {
         const response = await api.post('/chat', { message });
-        return response.data.reply || response.data.response || response.data.message || response.data;
+        const data = response.data;
+        let reply = data.reply || data.response || data.message || data;
+        if (typeof reply === 'object') {
+            reply = JSON.stringify(reply);
+        }
+        return String(reply);
     } catch (error) {
         // Handle different error formats
-        const message =
+        const errorMsg =
             error.response?.data?.message ||
             error.response?.data?.error ||
             'Failed to get AI response. Please try again.';
-        throw new Error(message);
+        throw new Error(errorMsg);
     }
 };
 

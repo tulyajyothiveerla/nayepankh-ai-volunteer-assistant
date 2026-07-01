@@ -40,11 +40,17 @@ Assistant: You're welcome! I'm here if you need any more help.`
 
 const generateResponse = async (message) => {
     try {
-        const result = await model.generateContent(message);
+        const timeoutPromise = new Promise((_, reject) =>
+            setTimeout(() => reject(new Error('Request timed out')), 30000)
+        );
+        const result = await Promise.race([
+            model.generateContent(message),
+            timeoutPromise
+        ]);
         return result.response.text();
     } catch (error) {
         console.error("Gemini API Error:", error);
-        throw new Error("Failed to communicate with AI service.");
+        return "I'm sorry, I don't have that information at the moment. Please contact the NayePankh Foundation team for further assistance.";
     }
 };
 
